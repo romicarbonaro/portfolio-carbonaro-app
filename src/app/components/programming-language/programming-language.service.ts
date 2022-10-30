@@ -9,7 +9,7 @@ import { ProgrammingLanguage } from 'src/app/model/programming-language';
 })
 export class ProgrammingLanguageService {
   // Base url
-  baseurl = 'http://localhost:8080';
+  baseurl = 'https://portfolio-carbonaro-api.herokuapp.com';
   constructor(private http: HttpClient) {}
   // Http Headers
   httpOptions = {

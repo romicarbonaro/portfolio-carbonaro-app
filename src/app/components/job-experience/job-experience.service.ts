@@ -9,7 +9,7 @@ import { JobExperience } from 'src/app/model/job-experience';
 })
 export class JobExperienceService {
   // Base url
-  baseurl = 'http://localhost:8080';
+  baseurl = 'https://portfolio-carbonaro-api.herokuapp.com';
   constructor(private http: HttpClient) {}
   // Http Headers
   httpOptions = {
