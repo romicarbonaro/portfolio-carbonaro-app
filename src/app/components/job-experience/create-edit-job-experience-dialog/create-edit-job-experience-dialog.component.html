@@ -1,0 +1,36 @@
+<h1 *ngIf="data.jobExperience">Editando experiencia laboral {{jobExperience.position}} de {{data.person.name}} {{data.person.lastName}}</h1>
+<h1 mat-dialog-title *ngIf="!data.jobExperience">Creando una nueva Experiencia Laboral</h1>
+<div mat-dialog-content>
+  <mat-form-field  appearance="fill">
+    <mat-label>Posición</mat-label>
+    <input matInput type="text" [(ngModel)]="jobExperience.position">
+  </mat-form-field >
+
+  <mat-form-field appearance="fill">
+    <mat-label>Compañia</mat-label>
+    <input matInput type="text" [(ngModel)]="jobExperience.company">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Descripción</mat-label>
+    <textarea matInput type="text" [(ngModel)]="jobExperience.description"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha de Inicio</mat-label>
+    <input matInput [matDatepicker]="startPicker" disabled [(ngModel)]="jobExperience.startDate">
+    <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+    <mat-datepicker #startPicker disabled="false"></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha de Finalizacion</mat-label>
+    <input matInput [matDatepicker]="endPicker" disabled [(ngModel)]="jobExperience.endDate">
+    <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+    <mat-datepicker #endPicker disabled="false"></mat-datepicker>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="jobExperience" cdkFocusInitial>Ok</button>
+</div>

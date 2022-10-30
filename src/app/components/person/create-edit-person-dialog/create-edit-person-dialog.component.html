@@ -1,0 +1,32 @@
+<h1 *ngIf="data.type == 'edit'">Editando a {{data.person.name}} {{data.person.lastName}}</h1>
+<h1 mat-dialog-title *ngIf="data.type == 'create'">Creando nueva Persona</h1>
+<div mat-dialog-content>
+  <mat-form-field  appearance="fill">
+    <mat-label>Nombre</mat-label>
+    <input matInput type="text" [(ngModel)]="person.name">
+  </mat-form-field >
+
+  <mat-form-field appearance="fill">
+    <mat-label>Apellido</mat-label>
+    <input matInput type="text" [(ngModel)]="person.lastName">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>DNI</mat-label>
+    <input matInput type="text" [(ngModel)]="person.dni">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <textarea matInput type="text" [(ngModel)]="person.description"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Image URL</mat-label>
+    <input matInput type="text" [(ngModel)]="person.imageUrl">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="person" cdkFocusInitial>Ok</button>
+</div>

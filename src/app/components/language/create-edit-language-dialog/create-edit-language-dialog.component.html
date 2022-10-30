@@ -1,0 +1,22 @@
+<h1 *ngIf="data.language">Editando idioma {{language.name}} de {{data.person.name}} {{data.person.lastName}}</h1>
+<h1 mat-dialog-title *ngIf="!data.language">Creando un nuevo Idioma</h1>
+<div mat-dialog-content>
+  <mat-form-field  appearance="fill">
+    <mat-label>Nombre</mat-label>
+    <input matInput type="text" [(ngModel)]="language.name">
+  </mat-form-field >
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nivel</mat-label>
+    <input matInput type="text" [(ngModel)]="language.level">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Certificación</mat-label>
+    <input matInput type="text" [(ngModel)]="language.certification">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="language" cdkFocusInitial>Ok</button>
+</div>

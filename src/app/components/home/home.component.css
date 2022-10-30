@@ -1,0 +1,14 @@
+.input {
+    background-color: black;
+}
+
+.home {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.no-x-scrollbar {
+    overflow-x: hidden;
+    overflow-y: auto;
+}

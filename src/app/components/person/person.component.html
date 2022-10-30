@@ -1,0 +1,66 @@
+<h1>Personas</h1>
+<h3 *ngIf="dataSource.length == 0">No hay Personas para mostrar</h3>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="lastName">
+      <th mat-header-cell *matHeaderCellDef> Apellido </th>
+      <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="dni">
+      <th mat-header-cell *matHeaderCellDef> DNI </th>
+      <td mat-cell *matCellDef="let element"> {{element.dni}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <td mat-cell *matCellDef="let element"> 
+        <span class="material-icons action-icon"
+          (click)="selectPerson(element)"
+          #tooltip="matTooltip" 
+          matTooltipPosition=left 
+          matTooltip="Seleccionar {{element.name}} {{element.lastName}}">search
+        </span>
+        <span class="material-icons action-icon"
+          (click)="editPerson(element)"
+          #tooltip="matTooltip" 
+          matTooltipPosition=above 
+          matTooltip="Edit {{element.name}} {{element.lastName}}">edit
+        </span>
+        <span class="material-icons action-icon"
+          (click)="deletePerson(element)"
+          #tooltip="matTooltip" 
+          matTooltipPosition=right 
+          matTooltip="Delete {{element.name}} {{element.lastName}}">delete
+        </span>
+        
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+<div class="add">
+  <button mat-raised-button color="primary" (click)="addPerson()">Agregar Persona</button>
+</div>
+<div *ngIf="person.id != 0">
+  <div class="centered">
+    <app-intro [person]="person"></app-intro>
+  </div>
+  <div class="inline">
+    <div class="left">
+      <app-language [person]="person"></app-language>
+    </div>
+    <div class="right">
+      <app-programming-language [person]="person"></app-programming-language>
+    </div>
+  </div>
+  <div>
+    <app-job-experience [person]="person"></app-job-experience>
+  </div>
+</div>

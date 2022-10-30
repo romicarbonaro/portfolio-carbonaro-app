@@ -1,0 +1,36 @@
+table {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+th {
+    text-align: center!important;
+    font-size: 20pt;
+    color: aquamarine;
+}
+
+.action-icon {
+    cursor: pointer;
+}
+
+h1 {
+    margin: 15px;
+    font-size: 36pt;
+}
+
+h3 {
+    margin: 15px;
+}
+
+
+
+button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.add {
+    width: 100%;
+    text-align: center;
+}
