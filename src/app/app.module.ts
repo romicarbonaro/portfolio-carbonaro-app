@@ -76,9 +76,9 @@ export class AppModule {
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCLd68UNljtPdVmr_IdqPGVnPXD_z0G4Vw",
-  authDomain: "portfolio-rcarbonaro-app.firebaseapp.com",
-  projectId: "portfolio-rcarbonaro-app",
-  storageBucket: "portfolio-rcarbonaro-app.appspot.com",
+  authDomain: "portfolio-carbonaro-app.firebaseapp.com",
+  projectId: "portfolio-carbonaro-app",
+  storageBucket: "portfolio-carbonaro-app.appspot.com",
   messagingSenderId: "429448387120",
   appId: "1:429448387120:web:ddd1cac25e59495bec2bf5",
   measurementId: "G-R6C02KSW0C"

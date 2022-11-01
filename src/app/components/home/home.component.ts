@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   login() {
-    if (this.user == "fdinapoli" && this.password == "12345678") {
+    if (this.user == "rcarbonaro" && this.password == "12345678") {
       this.loggedIn = true;
     }
   }

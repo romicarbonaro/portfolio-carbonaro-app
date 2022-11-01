@@ -7,5 +7,5 @@ import { PersonComponent } from './components/person/person.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'portolio-rcarbonaro-app';
+  title = 'portfolio-carbonaro-app';
 }

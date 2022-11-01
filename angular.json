@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portolio-rcarbonaro-app": {
+    "portfolio-carbonaro-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/portolio-rcarbonaro-app",
+            "outputPath": "dist/portfolio-carbonaro-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "portolio-rcarbonaro-app:build:production"
+              "browserTarget": "portfolio-carbonaro-app:build:production"
             },
             "development": {
-              "browserTarget": "portolio-rcarbonaro-app:build:development"
+              "browserTarget": "portfolio-carbonaro-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "portolio-rcarbonaro-app:build"
+            "browserTarget": "portfolio-carbonaro-app:build"
           }
         },
         "test": {
@@ -106,9 +106,9 @@
           "options": {
             "prerender": false,
             "ssr": false,
-            "browserTarget": "portolio-rcarbonaro-app:build:production",
-            "firebaseProject": "portfolio-rcarbonaro-app",
-            "firebaseHostingSite": "portfolio-rcarbonaro-app"
+            "browserTarget": "portfolio-carbonaro-app:build:production",
+            "firebaseProject": "portfolio-carbonaro-app",
+            "firebaseHostingSite": "portfolio-carbonaro-app"
           }
         }
       }
